@@ -6,7 +6,7 @@
 		"version": "${version}",
 		"metadata": {
 			"name": "Metal Pipe",
-			"description": "Adds a metal pipe.",
+			"description": "Adds a metal pipe and associated sound effects.",
 			"contributors": {
 				"Silver": "Owner"
 			},
