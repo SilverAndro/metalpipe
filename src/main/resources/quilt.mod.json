@@ -1,0 +1,21 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.github.silverandro.metal_pipe",
+		"id": "metal_pipe",
+		"version": "${version}",
+		"metadata": {
+			"name": "Metal Pipe",
+			"description": "Adds a metal pipe.",
+			"contributors": {
+				"Silver": "Owner"
+			},
+			"icon": "assets/metal_pipe/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "io.github.silverandro.metal_pipe.MetalPipeMod"
+		}
+	},
+	"mixin": "metal_pipe.mixins.json"
+}

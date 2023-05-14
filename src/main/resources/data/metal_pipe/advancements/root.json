@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "hasIron": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "count": {
+                            "min": 1
+                        },
+                        "item": "minecraft:iron_ingot"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "recipes": [
+            "metal_pipe:metalpipe"
+        ]
+    }
+}
