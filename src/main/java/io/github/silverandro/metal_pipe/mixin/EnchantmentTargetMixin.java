@@ -37,10 +37,6 @@ public class EnchantmentTargetMixin {
 			"(Lnet/minecraft/class_1792;)Z"
 		).replace(".", "/");
 
-		System.out.println(enchTargetName);
-		System.out.println(itemName);
-		System.out.println(acceptableItemName);
-
 		var node = new ClassNode();
 		// Class shell
 		node.name = enchTargetName + "$MetalPipeTarget";
