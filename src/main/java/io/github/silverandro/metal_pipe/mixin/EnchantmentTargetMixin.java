@@ -70,7 +70,11 @@ public class EnchantmentTargetMixin {
 		isAcceptableItem.desc = "(L" + itemName + ";)Z";
 
 		var acceptableItemInstructions = new InsnList();
-		acceptableItemInstructions.add(new LdcInsnNode(1));
+		acceptableItemInstructions.add(new IntInsnNode(Opcodes.ALOAD, 1));
+		acceptableItemInstructions.add(new MethodInsnNode(Opcodes.INVOKESTATIC, itemName, "getRawId", "(L" + itemName + ";)I"));
+		acceptableItemInstructions.add(new FieldInsnNode(Opcodes.GETSTATIC, "io/github/silverandro/metal_pipe/MetalPipeMod", "METAL_PIPE", "L" + itemName + ";"));
+		acceptableItemInstructions.add(new MethodInsnNode(Opcodes.INVOKESTATIC, itemName, "getRawId", "(L" + itemName + ";)I"));
+		acceptableItemInstructions.add(new InsnNode(Opcodes.ISUB));
 		acceptableItemInstructions.add(new InsnNode(Opcodes.IRETURN));
 
 		isAcceptableItem.instructions.add(acceptableItemInstructions);
