@@ -31,7 +31,7 @@ public abstract class ItemEntityMixin extends Entity {
 		)
 	)
 	public void metalpipe$captureOnGround(CallbackInfo ci) {
-		wasOnGround = onGround;
+		wasOnGround = isOnGround();
 	}
 
 	@Inject(
@@ -43,8 +43,8 @@ public abstract class ItemEntityMixin extends Entity {
 		)
 	)
 	public void metalpipe$onHitGround(CallbackInfo ci) {
-		if (!world.isClient && !wasOnGround && onGround && getStack().getItem() == MetalPipeMod.METAL_PIPE) {
-			world.playSound(
+		if (!getWorld().isClient && !wasOnGround && isOnGround() && getStack().getItem() == MetalPipeMod.METAL_PIPE) {
+			getWorld().playSound(
 				null,
 				getX(),
 				getY(),

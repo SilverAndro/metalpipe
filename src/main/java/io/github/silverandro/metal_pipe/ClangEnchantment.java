@@ -43,7 +43,7 @@ public class ClangEnchantment extends Enchantment {
 	public void onTargetDamaged(LivingEntity user, Entity target, int level) {
 		if (target instanceof LivingEntity le && le.isDead()) {
 			if (EnchantmentHelper.getLevel(MetalPipeMod.CLANG_ENCHANTMENT, user.getMainHandStack()) > 0) {
-				user.world.playSound(
+				user.getWorld().playSound(
 					null,
 					target.getX(),
 					target.getEyeY(),
